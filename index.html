@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Five Star Mobile Detailing | Mobile Car Detailing &amp; Ceramic Coating GTA</title>
+  <meta name="description" content="GTA's mobile detailing concierge. Premium mobile car detailing, paint correction &amp; ceramic coating in Mississauga, Brampton, Oakville &amp; the Greater Toronto Area. 2,000+ vehicles detailed. We come to you." />
+  <meta name="keywords" content="mobile detailing GTA, ceramic coating Mississauga, paint correction Brampton, mobile car detailing Oakville, auto detailing Toronto" />
+  <link rel="canonical" href="https://www.fivestarmobiledetailing.ca/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Five Star Mobile Detailing | GTA's Mobile Detailing Concierge" />
+  <meta property="og:description" content="Premium mobile car detailing, paint correction &amp; ceramic coating — we bring the shop to your driveway anywhere in the GTA." />
+  <meta property="og:url" content="https://www.fivestarmobiledetailing.ca/" />
+  <meta property="og:image" content="https://www.fivestarmobiledetailing.ca/gallary/bmw-m2-ceramic-coating-gta.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Five Star Mobile Detailing",
+    "image": "https://www.fivestarmobiledetailing.ca/logo.png",
+    "url": "https://www.fivestarmobiledetailing.ca/",
+    "telephone": "+14373450034",
+    "email": "Ryan@FiveStarMobileDetailing.ca",
+    "priceRange": "$$",
+    "areaServed": ["Mississauga", "Brampton", "Oakville", "Greater Toronto Area"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "sameAs": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "57"
+    },
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile Interior &amp; Exterior Detailing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paint Correction" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ceramic Coating" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fleet Detailing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Semi Truck Detailing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Boat, Marine &amp; RV Detailing" } }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:     #0A0A0B;
+      --charcoal:  #17171A;
+      --charcoal-2:#1F1F23;
+      --gold:      #FADA31;
+      --gold-dk:   #D9B818;
+      --white:     #FFFFFF;
+      --off-white: #FAFAF8;
+      --gray-100:  #F1F1EF;
+      --gray-200:  #E4E4E1;
+      --gray-400:  #9A9A94;
+      --gray-600:  #55554F;
+      --gray-800:  #232320;
+      --text:      #121210;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,.16), 0 8px 24px rgba(0,0,0,.10);
+      --shadow-xl: 0 32px 80px rgba(0,0,0,.20), 0 16px 40px rgba(0,0,0,.12);
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    section { position: relative; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+    .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-dk);
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(30px, 4.2vw, 48px);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .section-sub {
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: var(--gray-600);
+      max-width: 640px;
+      line-height: 1.65;
+    }
+
+    .section-header { text-align: center; margin: 0 auto 56px; max-width: 720px; }
+    .section-header .section-sub { margin: 0 auto; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+
+    /* ─── NAVBAR ───────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 0;
+      transition: all .4s cubic-bezier(.4,0,.2,1);
+    }
+
+    #navbar.scrolled {
+      padding: 10px 0;
+      background: rgba(10,10,11,.90);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 4px 32px rgba(0,0,0,.28);
+    }
+
+    .nav-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { height: 58px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,.85);
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      transition: color .2s, background .2s;
+      letter-spacing: .01em;
+    }
+
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.08); }
+
+    .nav-cta { display: flex; align-items: center; gap: 14px; }
+
+    .nav-phone {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-nav-quote {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+      background: var(--gold);
+      padding: 11px 22px;
+      border-radius: 50px;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      letter-spacing: .01em;
+    }
+
+    .btn-nav-quote:hover {
+      background: var(--gold-dk);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(250,218,49,.35);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      cursor: pointer;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: var(--black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      transform: translateY(-100%);
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+    }
+    .mobile-menu.open { transform: translateY(0); }
+    .mobile-menu a { font-size: 22px; font-weight: 700; color: #fff; }
+    .mobile-menu .close-btn {
+      position: absolute; top: 24px; right: 28px;
+      font-size: 26px; color: #fff; background: none; border: none;
+    }
+
+    /* ─── HERO ─────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      width: 100%;
+      height: 100svh;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .hero-video-wrap { position: absolute; inset: -5%; z-index: 0; overflow: hidden; }
+
+    #hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: heroZoom 22s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.08); } }
+
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom, rgba(10,10,11,.60) 0%, rgba(10,10,11,.68) 55%, rgba(10,10,11,.90) 100%);
+    }
+
+    .hero-vignette {
+      position: absolute; inset: 0; z-index: 2;
+      background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,.55) 100%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative; z-index: 4;
+      text-align: center;
+      padding: 0 24px;
+      max-width: 920px;
+      width: 100%;
+    }
+
+    .hero-logo {
+      height: 130px;
+      width: auto;
+      margin: 0 auto 28px;
+      opacity: 0;
+      transform: translateY(-20px) scale(.9);
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,.45));
+    }
+
+    .hero-headline {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(36px, 6vw, 74px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .hero-headline span { color: var(--gold); }
+
+    .hero-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(17px, 2.2vw, 24px);
+      font-weight: 600;
+      color: rgba(255,255,255,.92);
+      letter-spacing: .01em;
+      margin-bottom: 18px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-body {
+      font-size: clamp(15px, 1.5vw, 17px);
+      color: rgba(255,255,255,.72);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-buttons {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; flex-wrap: wrap; margin-bottom: 36px;
+      opacity: 0; transform: translateY(20px);
+    }
+
+    .btn-primary {
+      font-size: 16px; font-weight: 700; color: var(--black);
+      background: var(--gold);
+      padding: 16px 34px; border-radius: 50px;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--gold-dk); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(250,218,49,.4); }
+
+    .btn-secondary {
+      font-size: 16px; font-weight: 600; color: #fff;
+      border: 2px solid rgba(255,255,255,.5);
+      padding: 14px 32px; border-radius: 50px;
+      transition: border-color .2s, background .2s, transform .2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,.1); transform: translateY(-2px); }
+
+    .hero-trust {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; flex-wrap: wrap;
+      opacity: 0; transform: translateY(20px);
+    }
+
+    .trust-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: #fff;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      padding: 9px 16px; border-radius: 50px;
+      backdrop-filter: blur(8px);
+    }
+    .trust-pill .stars { color: var(--gold); letter-spacing: 1px; }
+
+    .scroll-indicator {
+      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+      z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 8px;
+      opacity: .8;
+    }
+    .scroll-mouse { width: 24px; height: 38px; border: 2px solid rgba(255,255,255,.6); border-radius: 14px; position: relative; }
+    .scroll-wheel { width: 4px; height: 8px; background: var(--gold); border-radius: 2px; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); animation: scrollWheel 1.6s ease-in-out infinite; }
+    @keyframes scrollWheel { 0% { opacity: 1; top: 6px; } 100% { opacity: 0; top: 18px; } }
+    .scroll-label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+
+    /* ─── ABOUT ────────────────────────────────────────── */
+    #about { padding: 120px 0 100px; background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
+    .about-copy p { color: var(--gray-600); font-size: 16px; line-height: 1.75; margin-bottom: 18px; }
+    .about-copy h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 700; margin: 26px 0 10px; }
+    .about-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); aspect-ratio: 4/5; }
+    .about-media img { width: 100%; height: 100%; object-fit: cover; }
+    .about-media img.zoom-hood { transform: scale(1.35); transform-origin: 42% 38%; }
+    .about-badge {
+      position: absolute; bottom: 22px; left: 22px; right: 22px;
+      background: rgba(10,10,11,.82); backdrop-filter: blur(10px);
+      border-radius: var(--radius-md); padding: 18px 20px;
+      color: #fff; display: flex; align-items: center; gap: 14px;
+    }
+    .about-badge .num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 28px; font-weight: 800; color: var(--gold); }
+    .about-badge .lbl { font-size: 12px; color: rgba(255,255,255,.75); line-height: 1.4; }
+
+    /* ─── TRUST STATS BAR ──────────────────────────────── */
+    #trust-bar { background: var(--gold); padding: 56px 0; }
+    .trust-bar-inner { text-align: center; }
+    .trust-bar-inner .eyebrow { color: rgba(10,10,11,.65); }
+    .trust-bar-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(24px, 3.4vw, 36px); font-weight: 800; color: var(--black); margin-bottom: 28px; letter-spacing: -.01em; }
+    .trust-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 920px; margin: 0 auto; }
+
+    /* ─── TRUSTED BY ───────────────────────────────────── */
+    #trusted-by { padding: 52px 0; background: var(--white); border-bottom: 1px solid var(--gray-200); }
+    .trusted-by-label { text-align: center; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 32px; }
+    .brand-logos { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 44px 56px; }
+    .brand-logo { height: 42px; display: flex; align-items: center; }
+    .brand-logo img { height: 100%; width: auto; max-width: 150px; object-fit: contain; filter: grayscale(100%); opacity: .55; transition: filter .3s, opacity .3s; }
+    .brand-logo:hover img { filter: grayscale(0%); opacity: 1; }
+    .trust-stat { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .trust-stat .n { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 30px; font-weight: 800; color: var(--black); }
+    .trust-stat .l { font-size: 13px; font-weight: 600; color: rgba(10,10,11,.7); text-align: center; }
+
+    /* ─── SERVICES ─────────────────────────────────────── */
+    #services { padding: 120px 0; background: var(--off-white); }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .service-card {
+      background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-md); transition: transform .3s, box-shadow .3s;
+      display: flex; flex-direction: column;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+    .service-card .img-wrap { aspect-ratio: 4/3; overflow: hidden; }
+    .service-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .service-card:hover .img-wrap img { transform: scale(1.08); }
+    .service-card .body { padding: 22px 22px 26px; flex: 1; display: flex; flex-direction: column; }
+    .service-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 10px; letter-spacing: -.01em; }
+    .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+    .service-card .learn { font-size: 13px; font-weight: 700; color: var(--gold-dk); display: inline-flex; align-items: center; gap: 6px; }
+
+    /* ─── PRICING ──────────────────────────────────────── */
+    #pricing { padding: 120px 0; background: var(--black); color: #fff; }
+    #pricing .section-title, #pricing .section-sub { color: #fff; }
+    #pricing .section-sub { color: rgba(255,255,255,.65); }
+    #pricing .eyebrow { color: var(--gold); }
+
+    .pricing-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 48px; flex-wrap: wrap; }
+    .pricing-tab-btn {
+      font-size: 14px; font-weight: 700; color: rgba(255,255,255,.7);
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      padding: 11px 22px; border-radius: 50px; transition: all .25s;
+    }
+    .pricing-tab-btn.active, .pricing-tab-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+    .pricing-panel { display: none; }
+    .pricing-panel.active { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+
+    .price-card {
+      background: var(--charcoal); border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-lg); padding: 32px 28px;
+      display: flex; flex-direction: column; transition: transform .3s, border-color .3s;
+    }
+    .price-card:hover { transform: translateY(-6px); border-color: rgba(250,218,49,.4); }
+    .price-card.featured { border-color: var(--gold); background: linear-gradient(180deg, rgba(250,218,49,.08), var(--charcoal) 40%); position: relative; }
+    .price-card.featured::before {
+      content: 'MOST POPULAR'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--black); font-size: 10px; font-weight: 800; letter-spacing: .08em;
+      padding: 5px 14px; border-radius: 50px;
+    }
+    .price-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+    .price-card .price { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 34px; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+    .price-card .price small { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.5); }
+    .price-card .addon-desc { font-size: 14px; color: rgba(255,255,255,.75); line-height: 1.6; margin: 16px 0 26px; flex: 1; }
+    .price-card ul { list-style: none; margin: 20px 0 26px; flex: 1; }
+    .price-card li { font-size: 14px; color: rgba(255,255,255,.75); padding: 8px 0; display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .price-card li:last-child { border-bottom: none; }
+    .price-card li svg { flex-shrink: 0; margin-top: 2px; color: var(--gold); }
+    .price-card .btn-primary { justify-content: center; width: 100%; }
+    .price-note { text-align: center; font-size: 13px; color: rgba(255,255,255,.4); margin-top: 32px; }
+
+    /* ─── GALLERY ──────────────────────────────────────── */
+    #gallery { padding: 120px 0; background: var(--white); }
+    .gallery-grid {
+      column-count: 4; column-gap: 18px;
+    }
+    .gallery-item {
+      break-inside: avoid; margin-bottom: 18px; border-radius: var(--radius-md);
+      overflow: hidden; position: relative; box-shadow: var(--shadow-sm);
+    }
+    .gallery-item img { width: 100%; display: block; transition: transform .5s; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-caption {
+      position: absolute; inset: auto 0 0 0; padding: 14px 16px;
+      background: linear-gradient(to top, rgba(0,0,0,.75), transparent);
+      color: #fff; font-size: 13px; font-weight: 600; opacity: 0; transition: opacity .3s;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+
+    /* ─── REVIEWS ──────────────────────────────────────── */
+    #reviews { padding: 120px 0; background: var(--charcoal); color: #fff; }
+    #reviews .section-title, #reviews .section-sub { color: #fff; }
+    #reviews .section-sub { color: rgba(255,255,255,.6); }
+    #reviews .eyebrow { color: var(--gold); }
+
+    .rating-badge {
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+      margin: 0 auto 48px; width: fit-content;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+      padding: 16px 28px; border-radius: var(--radius-lg);
+    }
+    .rating-badge .score { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 36px; font-weight: 800; color: var(--gold); }
+    .rating-badge .stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; }
+    .rating-badge .rb-sub { font-size: 12px; color: rgba(255,255,255,.55); }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 48px; }
+    .review-card {
+      background: var(--charcoal-2); border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-md); padding: 24px;
+    }
+    .review-card .stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+    .review-card p { font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.6; margin-bottom: 18px; min-height: 60px; }
+    .review-who { display: flex; align-items: center; gap: 10px; }
+    .review-avatar {
+      width: 38px; height: 38px; border-radius: 50%; background: var(--gold);
+      color: var(--black); display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 15px; flex-shrink: 0;
+    }
+    .review-name { font-size: 13px; font-weight: 700; }
+    .review-date { font-size: 12px; color: rgba(255,255,255,.45); }
+
+    .reviews-marquee-wrap {
+      position: relative; overflow: hidden; margin-bottom: 48px;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+      mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    }
+    .reviews-marquee { display: flex; width: max-content; gap: 14px; animation: reviews-scroll 55s linear infinite; }
+    .reviews-marquee-wrap:hover .reviews-marquee { animation-play-state: paused; }
+    .review-chip {
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+      background: var(--charcoal-2); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50px; padding: 10px 18px 10px 10px; white-space: nowrap;
+    }
+    .review-chip .review-avatar { width: 30px; height: 30px; font-size: 13px; }
+    .review-chip .chip-name { font-size: 13px; font-weight: 700; color: #fff; }
+    .review-chip .chip-stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; display: block; margin-top: 1px; }
+    @keyframes reviews-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .reviews-cta { text-align: center; }
+
+    /* ─── QUOTE FORM ───────────────────────────────────── */
+    #quote { padding: 120px 0; background: var(--gold); }
+    .quote-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: flex-start; }
+    #quote .eyebrow { color: rgba(10,10,11,.6); }
+    #quote .section-title { color: var(--black); }
+    .quote-copy p { font-size: 16px; color: rgba(10,10,11,.75); line-height: 1.7; margin-bottom: 24px; }
+    .quote-perks { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .quote-perks li { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; color: var(--black); }
+    .quote-perks svg { flex-shrink: 0; }
+
+    .quote-form {
+      background: var(--black); border-radius: var(--radius-lg); padding: 40px;
+      box-shadow: var(--shadow-xl);
+    }
+    .form-row { margin-bottom: 20px; }
+    .form-row label { display: block; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: .01em; }
+    .form-row input, .form-row textarea {
+      width: 100%; background: var(--charcoal-2); border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-sm); padding: 13px 16px; color: #fff; font-size: 14px;
+      font-family: inherit; transition: border-color .2s;
+    }
+    .form-row input::placeholder, .form-row textarea::placeholder { color: rgba(255,255,255,.35); }
+    .form-row input:focus, .form-row textarea:focus { outline: none; border-color: var(--gold); }
+    .form-row textarea { resize: vertical; min-height: 90px; }
+
+    .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 26px; }
+    .checkbox-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.85); }
+    .checkbox-item input { width: 17px; height: 17px; accent-color: var(--gold); flex-shrink: 0; }
+
+    .quote-form .btn-primary { width: 100%; justify-content: center; padding: 16px; font-size: 16px; }
+    .form-disclaimer { font-size: 12px; color: rgba(255,255,255,.4); text-align: center; margin-top: 14px; }
+
+    /* ─── FOOTER ───────────────────────────────────────── */
+    footer { background: var(--black); color: rgba(255,255,255,.7); padding: 72px 0 28px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; margin-bottom: 56px; }
+    .footer-logo img { height: 68px; margin-bottom: 18px; }
+    .footer-about { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,.5); max-width: 320px; }
+    .footer-col h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 18px; letter-spacing: .02em; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a, .footer-col span { font-size: 14px; color: rgba(255,255,255,.55); transition: color .2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08); padding-top: 26px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+      font-size: 13px; color: rgba(255,255,255,.4);
+    }
+
+    /* ─── STICKY MOBILE CTA ────────────────────────────── */
+    .mobile-cta-bar {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+      background: var(--black); border-top: 1px solid rgba(255,255,255,.1);
+      padding: 12px 16px; gap: 10px;
+    }
+    .mobile-cta-bar a {
+      flex: 1; text-align: center; padding: 13px; border-radius: 50px; font-size: 14px; font-weight: 700;
+    }
+    .mobile-cta-bar .call { background: rgba(255,255,255,.08); color: #fff; }
+    .mobile-cta-bar .quote { background: var(--gold); color: var(--black); }
+
+    /* ─── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-media { max-width: 480px; margin: 0 auto; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-panel.active { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .quote-grid { grid-template-columns: 1fr; gap: 40px; }
+      .gallery-grid { column-count: 3; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .trust-stats { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    }
+
+    @media (max-width: 680px) {
+      .container { padding: 0 20px; }
+      .nav-inner { padding: 0 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { column-count: 2; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .checkbox-grid { grid-template-columns: 1fr; }
+      .quote-form { padding: 28px 22px; }
+      .hero-logo { height: 88px; }
+      #about, #services, #pricing, #gallery, #reviews, #quote { padding: 80px 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .mobile-cta-bar { display: flex; }
+      body { padding-bottom: 68px; }
+      .about-badge { flex-direction: column; align-items: flex-start; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── MOBILE MENU ────────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&#x2715;</button>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#pricing" onclick="closeMobileMenu()">Ceramic Coating</a>
+    <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+    <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+    <a href="#quote" onclick="closeMobileMenu()">Contact</a>
+    <a href="#quote" onclick="closeMobileMenu()" class="btn-primary" style="margin-top:10px;">Get a Free Quote</a>
+  </div>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Five Star Mobile Detailing Home">
+        <img src="logo.png" alt="Five Star Mobile Detailing logo" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Ceramic Coating</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#quote">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="tel:+14373450034" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          437-345-0034
+        </a>
+        <a href="#quote" class="btn-nav-quote">Get a Free Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ───────────────────────────────────────── -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-video-wrap">
+      <video id="hero-video" autoplay loop muted playsinline preload="auto" aria-hidden="true">
+        <source src="hero-detailing-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <img src="logo.png" alt="Five Star Mobile Detailing" class="hero-logo" id="heroLogo" />
+
+      <h1 class="hero-headline" id="heroHeadline">
+        GTA's Mobile <span>Detailing</span> Concierge
+      </h1>
+
+      <p class="hero-sub" id="heroSub">We Bring The Shop To Your Driveway.</p>
+
+      <p class="hero-body" id="heroBody">
+        Premium mobile detailing, paint correction &amp; ceramic coating across Mississauga, Brampton, Oakville &amp; the entire GTA — fully equipped with our own water and power, so you never have to leave home.
+      </p>
+
+      <div class="hero-buttons" id="heroBtns">
+        <a href="#quote" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+          Reserve Your Detail
+        </a>
+        <a href="tel:+14373450034" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          437-345-0034
+        </a>
+      </div>
+
+      <div class="hero-trust" id="heroTrust">
+        <div class="trust-pill"><span class="stars">★★★★★</span> Trusted Across the GTA</div>
+        <div class="trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          2,000+ Vehicles Detailed &bull; Certified Ceramic Installers
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ──────────────────────────────────────── -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-copy" data-reveal>
+        <span class="eyebrow">About Five Star</span>
+        <h2 class="section-title">GTA's Mobile Detailing Concierge</h2>
+        <p>At <strong>Five Star Mobile Detailing</strong>, we bring premium car detailing services directly to your door — whether you're in Mississauga, Brampton, Oakville, or anywhere across the Greater Toronto Area. We arrive fully equipped with our own water and power, so you never need to visit a shop.</p>
+        <p>Since 2021 we've built our reputation one vehicle at a time on meticulous attention to detail, honest communication, and results that speak for themselves — from daily drivers to collector cars, corporate fleets to ceramic coating clients.</p>
+        <h3>Concierge Convenience</h3>
+        <p>Book online, tell us about your vehicle, and we'll come to you — at home, at the office, or wherever's easiest. No shop visit, no waiting room, no wasted time.</p>
+      </div>
+      <div class="about-media" data-reveal>
+        <img src="gallary/corvette-mobile-detailing-mississauga.webp" alt="Close-up of a Corvette hood after mobile detailing by Five Star Mobile Detailing" loading="lazy" class="zoom-hood" />
+        <div class="about-badge">
+          <span class="num">2,000+</span>
+          <span class="lbl">Vehicles detailed for GTA drivers since 2021</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRUST STATS BAR ────────────────────────────── -->
+  <section id="trust-bar">
+    <div class="container trust-bar-inner">
+      <span class="eyebrow">Trusted By GTA Drivers</span>
+      <h2 class="trust-bar-title">Not Your Typical Car Wash</h2>
+      <div class="trust-stats">
+        <div class="trust-stat"><span class="n">2,000+</span><span class="l">Vehicles Detailed</span></div>
+        <div class="trust-stat"><span class="n">5.0★</span><span class="l">Average Rating</span></div>
+        <div class="trust-stat"><span class="n">100%</span><span class="l">Mobile Service</span></div>
+        <div class="trust-stat"><span class="n">Est.</span><span class="l">2021 &bull; Certified Installers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRUSTED BY ─────────────────────────────────── -->
+  <section id="trusted-by">
+    <div class="container" data-reveal>
+      <p class="trusted-by-label">Trusted By</p>
+      <div class="brand-logos">
+        <div class="brand-logo"><img src="brands/peel-regional-paramedic-services-logo.avif" alt="Peel Regional Paramedic Services" loading="lazy" /></div>
+        <div class="brand-logo"><img src="brands/peel-region-logo.avif" alt="Peel Region" loading="lazy" /></div>
+        <div class="brand-logo"><img src="brands/air-canada-logo.avif" alt="Air Canada" loading="lazy" /></div>
+        <div class="brand-logo"><img src="brands/miller-waste-systems-logo.avif" alt="Miller Waste Systems" loading="lazy" /></div>
+        <div class="brand-logo"><img src="brands/proax-technologies-logo.avif" alt="ProAx Technologies" loading="lazy" /></div>
+        <div class="brand-logo"><img src="brands/krown-rust-control-logo.avif" alt="Krown Rust Control" loading="lazy" /></div>
+        <div class="brand-logo"><img src="brands/tire-wholesale-inc-logo.avif" alt="Tire Wholesale Inc." loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ───────────────────────────────────── -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Services We Offer</span>
+        <h2 class="section-title">Built For Owners Who Value Their Vehicles</h2>
+        <p class="section-sub">From daily drivers to fleets, luxury vehicles to marine — mobile detailing designed around your schedule, not ours.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/mercedes-interior-detailing-brampton.webp" alt="Mercedes interior detailing in Brampton" loading="lazy" /></div>
+          <div class="body">
+            <h3>Interior / Exterior Detailing</h3>
+            <p>Every inch cleaned, conditioned &amp; polished — from the dashboard to the wheels — using premium products and equipment.</p>
+            <a href="#quote" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/bmw-m3-paint-correction-detail.webp" alt="Paint correction and ceramic coating on a BMW M3" loading="lazy" /></div>
+          <div class="body">
+            <h3>Paint Correction &amp; Ceramic Coating</h3>
+            <p>Remove imperfections and lock in a showroom-deep shine with our certified Nano-Brite &amp; System X ceramic installations.</p>
+            <a href="#pricing" class="learn">View Packages &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/fleet-detailing-peel-paramedics.webp" alt="Fleet detailing for a Peel Region Paramedic Services vehicle" loading="lazy" /></div>
+          <div class="body">
+            <h3>Company Fleet Detailing</h3>
+            <p>We come to your lot and detail your fleet on-site — keeping your vehicles presentable without disrupting operations.</p>
+            <a href="#quote" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/wheel-detail-red-brake-caliper.webp" alt="Detailing add-on service, wheel and brake caliper detail" loading="lazy" /></div>
+          <div class="body">
+            <h3>Detailing Add-Ons</h3>
+            <p>Headlight restoration, engine bay detailing, odor removal, pet hair removal &amp; more — customize your package.</p>
+            <a href="#quote" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/volvo-semi-truck-detailing-gta.webp" alt="Semi truck detailing, day cab and sleeper, GTA" loading="lazy" /></div>
+          <div class="body">
+            <h3>Semi Truck Detailing</h3>
+            <p>Day cab, sleeper cab &amp; full rig detailing that leaves your truck looking brand new — on-site, on your schedule.</p>
+            <a href="#quote" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/seadoo-jetski-marine-detailing.webp" alt="Sea-Doo jet ski marine detailing" loading="lazy" /></div>
+          <div class="body">
+            <h3>Boat, Marine &amp; RV Detailing</h3>
+            <p>Exterior washing and interior detailing for boats, jet skis &amp; RVs — keeping your watercraft in top condition.</p>
+            <a href="#quote" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/corvette-mobile-detailing-mississauga.webp" alt="Corvette detailing and customization in Mississauga" loading="lazy" /></div>
+          <div class="body">
+            <h3>Vehicle Service &amp; Customization</h3>
+            <p>From basic maintenance to full detailing overhauls — we help keep your vehicle looking and running like new.</p>
+            <a href="#quote" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="gallary/bmw-m2-ceramic-coating-gta.webp" alt="Dealership-ready mobile detailing on a BMW M2" loading="lazy" /></div>
+          <div class="body">
+            <h3>Dealership Detailing</h3>
+            <p>On-site detailing for used &amp; new car dealerships — impress your customers with showroom-ready inventory.</p>
+            <a href="#quote" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRICING / CERAMIC COATING ──────────────────── -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Pricing &amp; Packages</span>
+        <h2 class="section-title">Transparent Pricing For Every Vehicle</h2>
+        <p class="section-sub">From express hand washes to full ceramic coating protection — all prices are starting estimates, final quote depends on vehicle size &amp; condition.</p>
+      </div>
+
+      <div class="pricing-tabs">
+        <button class="pricing-tab-btn active" data-tab="packages">Detailing Packages</button>
+        <button class="pricing-tab-btn" data-tab="interior-exterior">Interior / Exterior Only</button>
+        <button class="pricing-tab-btn" data-tab="coating">Ceramic Coating</button>
+        <button class="pricing-tab-btn" data-tab="correction">Paint Correction</button>
+        <button class="pricing-tab-btn" data-tab="addons">Add-Ons</button>
+        <button class="pricing-tab-btn" data-tab="vehicle">Vehicle Services</button>
+      </div>
+
+      <div class="pricing-panel active" id="panel-packages">
+        <div class="price-card">
+          <h3>Standard In &amp; Out Detail</h3>
+          <div class="price">$100<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Foam bath &amp; hand wash exterior</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Wheel, tire &amp; door jamb cleaning</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Window cleaning inside &amp; out</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full interior vacuum &amp; wipe down</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Complete In &amp; Out Detail</h3>
+          <div class="price">$199<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Exterior foam bath, hand wash &amp; wheel detail</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Protective wax + tire shine, hand dried</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full interior steam clean, shampoo &amp; heated extraction</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Complete Plus</h3>
+          <div class="price">$349<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Everything in Complete, plus 3-stage machine polish</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Engine bay wash, clay bar treatment &amp; sealant</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>De-odorizing process for a showroom finish</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-interior-exterior">
+        <div class="price-card">
+          <h3>Premium Hand Wash, Wax &amp; Dry</h3>
+          <div class="price">$60<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Two-bucket hand wash method</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Deep clean of tires, rims &amp; wheel wells</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hand dried with drying aid/sealant for shine</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Clay &amp; Seal</h3>
+          <div class="price">$200<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Complete iron decontamination wash</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Advanced clay bar treatment</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ceramic Shield spray coat (6–12 mo) + engine bay detail</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Complete Interior Detail</h3>
+          <div class="price">$100<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Complete vacuum incl. trunk &amp; brush/wipe down</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Floor, carpet &amp; seat steam, shampoo &amp; extraction</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Leather conditioning &amp; air vents cleaned</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-coating">
+        <div class="price-card">
+          <h3>1 Year Coating</h3>
+          <div class="price">$299<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 layer Nano-Brite "Rejuvenate" coating</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Applied to exterior, plastics, wheels &amp; trim</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>3 Year Coating</h3>
+          <div class="price">$599<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>2 layers Nano-Brite "Ultra" + 1 layer top coat</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Applied to exterior, plastics, wheels &amp; trim</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>5 Year Coating</h3>
+          <div class="price">$999<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>3 layers Nano-Brite "Platinum" + top coat</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nano-Brite "Vision" coating on all glass</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-correction">
+        <div class="price-card">
+          <h3>One Stage</h3>
+          <div class="price">$400<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Removes light imperfections</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Enhances overall paint appearance</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sleek, glossy finish</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Two Stage</h3>
+          <div class="price">Get Quote</div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Initial correction pass + finishing polish</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Deep, reflective showroom shine</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ideal before ceramic coating</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Three Stage</h3>
+          <div class="price">Get Quote</div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Decontamination, compounding &amp; polishing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Corrects deep swirls &amp; scratches</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Maximum correction &amp; protection</li>
+          </ul>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-addons">
+        <div class="price-card">
+          <h3>Headlight Restoration</h3>
+          <div class="price">$50</div>
+          <p class="addon-desc">Wet sanding, 3-stage machine polish &amp; 2 coats of ceramic coating for a 1-year warranty. Per pair.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Pet Hair Removal</h3>
+          <div class="price">$40</div>
+          <p class="addon-desc">Complete removal of pet hair from seats, carpets &amp; trunk, leaving your vehicle fresh and clean.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Engine Bay Detail</h3>
+          <div class="price">$50</div>
+          <p class="addon-desc">Complete degrease &amp; brush down, rinse &amp; air dry, finished with dressing on all plastics.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Fall Out Removal &amp; Clay Bar</h3>
+          <div class="price">$199</div>
+          <p class="addon-desc">Complete exterior fallout removal, full hand wash &amp; dry, plus an advanced clay bar treatment.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Tree Sap &amp; Bug Removal</h3>
+          <div class="price">$40</div>
+          <p class="addon-desc">Safe, thorough removal of stubborn bugs &amp; tree sap without damaging your paint.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-vehicle">
+        <div class="price-card">
+          <h3>Seasonal Tire Swap</h3>
+          <div class="price">$50<small>+</small></div>
+          <p class="addon-desc">$50 car/sedan/coupe &middot; $60 truck/SUV/minivan &middot; $70 all Tesla models. Torqued &amp; filled to spec, tires must be mounted on rims.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Caliper Paint</h3>
+          <div class="price">$199</div>
+          <p class="addon-desc">All 4 calipers sanded, primed with 3 coats of high-heat primer, paint &amp; clear coat. Custom decals available.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Oil Change</h3>
+          <div class="price">$50</div>
+          <p class="addon-desc">Old oil &amp; filter drained and disposed of, replaced &amp; filled to manufacturer spec. Customer supplies oil &amp; filter.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Chrome Delete</h3>
+          <div class="price">Contact</div>
+          <p class="addon-desc">Custom quote based on your vehicle's year, make &amp; model — call or text <a href="tel:+14373450034" style="color:var(--gold);font-weight:700;">437-345-0034</a>.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Headlight / Taillight Tint</h3>
+          <div class="price">$80</div>
+          <p class="addon-desc">Light or dark smoke film for headlights, taillights or fog lights — durable &amp; easy to remove.</p>
+          <a href="#quote" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <p class="price-note">Also available: Fabric Guard, Leather Guard &amp; Vision Window Coating — <a href="#quote" style="color:var(--gold);font-weight:700;">ask for a custom quote</a>.</p>
+    </div>
+  </section>
+
+  <!-- ─── GALLERY ────────────────────────────────────── -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Our Work</span>
+        <h2 class="section-title">Real Vehicles. Real Results.</h2>
+        <p class="section-sub">A look at recent details across the GTA — luxury vehicles, daily drivers, fleets &amp; more.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="gallary/bmw-m2-ceramic-coating-gta.webp" alt="BMW M2 after ceramic coating, GTA" loading="lazy" /><div class="gallery-caption">BMW M2 &bull; Ceramic Coating</div></div>
+        <div class="gallery-item"><img src="gallary/corvette-mobile-detailing-mississauga.webp" alt="Corvette after mobile detailing in Mississauga" loading="lazy" /><div class="gallery-caption">Corvette Stingray &bull; Full Detail</div></div>
+        <div class="gallery-item"><img src="gallary/mercedes-interior-detailing-brampton.webp" alt="Mercedes interior detail" loading="lazy" /><div class="gallery-caption">Mercedes &bull; Interior Detail</div></div>
+        <div class="gallery-item"><img src="gallary/bmw-m3-paint-correction-detail.webp" alt="BMW M3 paint correction" loading="lazy" /><div class="gallery-caption">BMW M3 &bull; Paint Correction</div></div>
+        <div class="gallery-item"><img src="gallary/wheel-ceramic-coating-brake-caliper-detail.webp" alt="Wheel and brake caliper ceramic coating detail" loading="lazy" /><div class="gallery-caption">Wheel &amp; Caliper Detail</div></div>
+        <div class="gallery-item"><img src="gallary/volvo-semi-truck-detailing-gta.webp" alt="Volvo semi truck detailing GTA" loading="lazy" /><div class="gallery-caption">Volvo Semi &bull; Full Detail</div></div>
+        <div class="gallery-item"><img src="gallary/toyota-tacoma-exterior-detail.webp" alt="Toyota Tacoma exterior detail" loading="lazy" /><div class="gallery-caption">Toyota Tacoma &bull; Exterior Detail</div></div>
+        <div class="gallery-item"><img src="gallary/fleet-detailing-peel-paramedics.webp" alt="Peel Region Paramedic Services fleet vehicle detailing" loading="lazy" /><div class="gallery-caption">Peel Region Paramedics &bull; Fleet Detail</div></div>
+        <div class="gallery-item"><img src="gallary/seadoo-jetski-marine-detailing.webp" alt="Sea-Doo jet ski marine detail" loading="lazy" /><div class="gallery-caption">Sea-Doo &bull; Marine Detail</div></div>
+        <div class="gallery-item"><img src="gallary/wheel-detail-red-brake-caliper.webp" alt="Wheel detail with red brake caliper" loading="lazy" /><div class="gallery-caption">Wheel &amp; Caliper Detail</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── REVIEWS ────────────────────────────────────── -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">What Our Customers Say</span>
+        <h2 class="section-title">Verified Real Reviews</h2>
+        <p class="section-sub">Real customers, real people, real 5-star experiences.</p>
+      </div>
+
+      <div class="rating-badge" data-reveal>
+        <span class="score">5.0</span>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="rb-sub">Based on 57 verified Google reviews</div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Amazing experience working with Ryan, he was reachable well in advance and was kind enough to wait for me despite being late."</p>
+          <div class="review-who">
+            <div class="review-avatar">K</div>
+            <div><div class="review-name">Kshitij Aggarwal</div><div class="review-date">Local Guide &bull; Google Review</div></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"5 stars for! He came to my office, cleaned the car inside + out, and did a great job. Car looks brand new and I'm very happy with the results. Reliable, fast, and reasonably priced. Will use him again for sure 👍 Ryan"</p>
+          <div class="review-who">
+            <div class="review-avatar">A</div>
+            <div><div class="review-name">Azadeh Payandeh</div><div class="review-date">Google Review</div></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Ryan did an amazing job on my jeep! Stains were completely removed from the seats and all the dust and dirt was gone. I've taken my cars to other mobile places and always found something leftover, but with Five Star I was actually happy with the results. Definitely my go-to now."</p>
+          <div class="review-who">
+            <div class="review-avatar">M</div>
+            <div><div class="review-name">Mohan</div><div class="review-date">Local Guide &bull; Google Review</div></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Had my car detailed inside and out along with clay bar and sealer. Ryan took his time and answered all my questions. I'm a detail guy and Ryan was extremely competent and hardworking. Car looks great — will definitely be using him again."</p>
+          <div class="review-who">
+            <div class="review-avatar">R</div>
+            <div><div class="review-name">Rick</div><div class="review-date">Google Review</div></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Don't go anywhere if you need the best detailing services. My car looks new now. Don't go anywhere if you need the best mobile detailing for your car."</p>
+          <div class="review-who">
+            <div class="review-avatar">V</div>
+            <div><div class="review-name">Vikas Saharan</div><div class="review-date">Local Guide &bull; Google Review</div></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Had Ryan at 5 Star put a Deluxe Ceramic Coating package on my Mercedes-Benz C300 Coupe. What a fantastic experience! Ryan goes above and beyond with his communication and professionalism, keeping me updated the whole process."</p>
+          <div class="review-who">
+            <div class="review-avatar">M</div>
+            <div><div class="review-name">Mark Hunt</div><div class="review-date">Google Review</div></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Ryan took great care of my Durango RT. Caliper paint, mounted summer rims, ceramic coating for both. Amazing attention to detail and service. Highly recommended, I will definitely be going back!"</p>
+          <div class="review-who">
+            <div class="review-avatar">A</div>
+            <div><div class="review-name">Alex Magallanes</div><div class="review-date">Local Guide &bull; Google Review</div></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Went with a stage 1 paint correction plus the deluxe detailing package and could not be happier. Ryan did an amazing job and my car looks and smells new."</p>
+          <div class="review-who">
+            <div class="review-avatar">C</div>
+            <div><div class="review-name">Chris Choo</div><div class="review-date">Google Review</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-marquee-wrap" data-reveal>
+        <div class="reviews-marquee">
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Altamash Khan</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">D</div><div><span class="chip-name">David Jackson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">N</div><div><span class="chip-name">Nene Enterprise</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Angelo Costante</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">D</div><div><span class="chip-name">Darran Frankland</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">O</div><div><span class="chip-name">Olivea Bauer</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">S</div><div><span class="chip-name">Suzanne C.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">N</div><div><span class="chip-name">Noah Duarte</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">C</div><div><span class="chip-name">Clare Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">M</div><div><span class="chip-name">Michelle Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">K</div><div><span class="chip-name">Kit Kat</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Ali Mohammad</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">H</div><div><span class="chip-name">Hamza Arshad</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">M</div><div><span class="chip-name">MrCaribbean737</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">M</div><div><span class="chip-name">Melanie Flynn</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">R</div><div><span class="chip-name">Rahul Batra</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">T</div><div><span class="chip-name">Tracey Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">F</div><div><span class="chip-name">Faisal Jilani</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">S</div><div><span class="chip-name">Snowtorious</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">S</div><div><span class="chip-name">Susan Wery</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">C</div><div><span class="chip-name">Chantal Hebert</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">K</div><div><span class="chip-name">Kimberly Watt</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Adnan Hamid</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Angel Weaver</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">J</div><div><span class="chip-name">Jobin Ps</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Anton Pragas</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">T</div><div><span class="chip-name">Tara Chatura</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">V</div><div><span class="chip-name">Vianney Fernandes</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">M</div><div><span class="chip-name">Michelle Wiese</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Ateasha Murray</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">E</div><div><span class="chip-name">Eric Elle</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">B</div><div><span class="chip-name">Brett Huttman</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">H</div><div><span class="chip-name">Hakan Ipek</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">K</div><div><span class="chip-name">Ken Lee</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">B</div><div><span class="chip-name">Blessings Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">T</div><div><span class="chip-name">T.P.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">M</div><div><span class="chip-name">Mariah Mur</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">N</div><div><span class="chip-name">Nataline H.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">J</div><div><span class="chip-name">J.M.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">O</div><div><span class="chip-name">Olivia Coelho</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">M</div><div><span class="chip-name">M.J.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">T</div><div><span class="chip-name">Thatonegamer Productions</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Agatha Derengowska</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">T</div><div><span class="chip-name">Thomas King</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Abdul R.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">C</div><div><span class="chip-name">Chazzy</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">A</div><div><span class="chip-name">Alan Velasco</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">R</div><div><span class="chip-name">Rouzbeh Rouhi</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip"><div class="review-avatar">J</div><div><span class="chip-name">Jasmeet Gill</span><span class="chip-stars">★★★★★</span></div></div>
+
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Altamash Khan</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">D</div><div><span class="chip-name">David Jackson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">N</div><div><span class="chip-name">Nene Enterprise</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Angelo Costante</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">D</div><div><span class="chip-name">Darran Frankland</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">O</div><div><span class="chip-name">Olivea Bauer</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">S</div><div><span class="chip-name">Suzanne C.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">N</div><div><span class="chip-name">Noah Duarte</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">C</div><div><span class="chip-name">Clare Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">M</div><div><span class="chip-name">Michelle Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">K</div><div><span class="chip-name">Kit Kat</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Ali Mohammad</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">H</div><div><span class="chip-name">Hamza Arshad</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">M</div><div><span class="chip-name">MrCaribbean737</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">M</div><div><span class="chip-name">Melanie Flynn</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">R</div><div><span class="chip-name">Rahul Batra</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">T</div><div><span class="chip-name">Tracey Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">F</div><div><span class="chip-name">Faisal Jilani</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">S</div><div><span class="chip-name">Snowtorious</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">S</div><div><span class="chip-name">Susan Wery</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">C</div><div><span class="chip-name">Chantal Hebert</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">K</div><div><span class="chip-name">Kimberly Watt</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Adnan Hamid</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Angel Weaver</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">J</div><div><span class="chip-name">Jobin Ps</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Anton Pragas</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">T</div><div><span class="chip-name">Tara Chatura</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">V</div><div><span class="chip-name">Vianney Fernandes</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">M</div><div><span class="chip-name">Michelle Wiese</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Ateasha Murray</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">E</div><div><span class="chip-name">Eric Elle</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">B</div><div><span class="chip-name">Brett Huttman</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">H</div><div><span class="chip-name">Hakan Ipek</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">K</div><div><span class="chip-name">Ken Lee</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">B</div><div><span class="chip-name">Blessings Anderson</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">T</div><div><span class="chip-name">T.P.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">M</div><div><span class="chip-name">Mariah Mur</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">N</div><div><span class="chip-name">Nataline H.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">J</div><div><span class="chip-name">J.M.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">O</div><div><span class="chip-name">Olivia Coelho</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">M</div><div><span class="chip-name">M.J.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">T</div><div><span class="chip-name">Thatonegamer Productions</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Agatha Derengowska</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">T</div><div><span class="chip-name">Thomas King</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Abdul R.</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">C</div><div><span class="chip-name">Chazzy</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">A</div><div><span class="chip-name">Alan Velasco</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">R</div><div><span class="chip-name">Rouzbeh Rouhi</span><span class="chip-stars">★★★★★</span></div></div>
+          <div class="review-chip" aria-hidden="true"><div class="review-avatar">J</div><div><span class="chip-name">Jasmeet Gill</span><span class="chip-stars">★★★★★</span></div></div>
+        </div>
+      </div>
+
+      <div class="reviews-cta" data-reveal>
+        <a href="https://www.google.com/search?q=Five+Star+Mobile+Detailing+GTA+reviews" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.568L24 9.75l-6 5.847L19.335 24 12 19.897 4.665 24 6 15.597 0 9.75l8.332-1.595z"/></svg>
+          Leave Us a 5-Star Review
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── QUOTE FORM ─────────────────────────────────── -->
+  <section id="quote">
+    <div class="container quote-grid">
+      <div class="quote-copy" data-reveal>
+        <span class="eyebrow">Get Started</span>
+        <h2 class="section-title">Tell Us About Your Vehicle</h2>
+        <p>Fill out the form and we'll get back to you within 24–48 hours with a custom quote — or call/text us directly at <a href="tel:+14373450034" style="font-weight:700;color:var(--black);">437-345-0034</a>.</p>
+        <ul class="quote-perks">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>We come to you — anywhere in the GTA</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fully equipped with our own water &amp; power</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Certified ceramic coating installers</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>2,000+ vehicles detailed since 2021</li>
+        </ul>
+      </div>
+
+      <form class="quote-form" data-reveal action="https://formsubmit.co/Ryan@FiveStarMobileDetailing.ca" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request — Five Star Mobile Detailing" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://www.fivestarmobiledetailing.ca/#quote" />
+
+        <div class="form-row">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="Full Name" placeholder="Enter your name here" required />
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="Phone Number" placeholder="Enter your number here" required />
+        </div>
+
+        <div class="form-row">
+          <label for="details">Vehicle Year, Make &amp; Model &amp; Additional Details</label>
+          <textarea id="details" name="Vehicle Details" placeholder="ex. 2024 Honda Civic, Complete Interior Detail, I have pet hair, etc."></textarea>
+        </div>
+
+        <label style="display:block;font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Which Service Would Best Suit You?</label>
+        <div class="checkbox-grid">
+          <label class="checkbox-item"><input type="checkbox" name="Service" value="Interior Only" />Interior Only</label>
+          <label class="checkbox-item"><input type="checkbox" name="Service" value="Complete Detail" />Complete Detail</label>
+          <label class="checkbox-item"><input type="checkbox" name="Service" value="Paint Enhancement & Protection" />Paint Enhancement</label>
+          <label class="checkbox-item"><input type="checkbox" name="Service" value="Ceramic Coating" />Ceramic Coating</label>
+          <label class="checkbox-item"><input type="checkbox" name="Service" value="Ozone Odor Removal" />Ozone Odor Removal</label>
+          <label class="checkbox-item"><input type="checkbox" name="Service" value="Not Sure" />Not Sure Yet</label>
+        </div>
+
+        <button type="submit" class="btn-primary">Get My Quote</button>
+        <p class="form-disclaimer">We'll never share your info. Response within 24–48 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="logo.png" alt="Five Star Mobile Detailing" /></div>
+          <p class="footer-about">GTA's mobile detailing concierge. Premium car detailing, paint correction &amp; ceramic coating that comes to you — Mississauga, Brampton, Oakville &amp; beyond.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Ceramic Coating</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><span>Interior &amp; Exterior Detailing</span></li>
+            <li><span>Paint Correction</span></li>
+            <li><span>Fleet &amp; Semi Truck Detailing</span></li>
+            <li><span>Boat, Marine &amp; RV Detailing</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="tel:+14373450034">437-345-0034</a></li>
+            <li><a href="mailto:Ryan@FiveStarMobileDetailing.ca">Ryan@FiveStarMobileDetailing.ca</a></li>
+            <li><span>Serving Mississauga, Brampton, Oakville &amp; the GTA</span></li>
+            <li><a href="#quote" class="btn-nav-quote" style="display:inline-block;margin-top:6px;">Get a Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Five Star Mobile Detailing. All rights reserved.</span>
+        <span>Est. 2021 &bull; Serving the Greater Toronto Area</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── MOBILE STICKY CTA ──────────────────────────── -->
+  <div class="mobile-cta-bar">
+    <a href="tel:+14373450034" class="call">Call Now</a>
+    <a href="#quote" class="quote">Get a Free Quote</a>
+  </div>
+
+  <script>
+    /* Video playback */
+    const video = document.getElementById('hero-video');
+    video.addEventListener('loadedmetadata', () => { video.playbackRate = 0.8; });
+    video.playbackRate = 0.8;
+
+    /* Navbar scroll state */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    /* Mobile menu */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+    });
+    closeMenu.addEventListener('click', closeMobileMenu);
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    /* Pricing tabs */
+    document.querySelectorAll('.pricing-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.pricing-tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.pricing-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    /* GSAP entrance + scroll reveal */
+    gsap.registerPlugin(ScrollTrigger);
+
+    const heroTl = gsap.timeline({ delay: .2 });
+    heroTl
+      .to('#heroLogo', { opacity: 1, y: 0, scale: 1, duration: .9, ease: 'power3.out' })
+      .to('#heroHeadline', { opacity: 1, y: 0, duration: .8, ease: 'power3.out' }, '-=.5')
+      .to('#heroSub', { opacity: 1, y: 0, duration: .7, ease: 'power3.out' }, '-=.5')
+      .to('#heroBody', { opacity: 1, y: 0, duration: .7, ease: 'power3.out' }, '-=.5')
+      .to('#heroBtns', { opacity: 1, y: 0, duration: .7, ease: 'power3.out' }, '-=.45')
+      .to('#heroTrust', { opacity: 1, y: 0, duration: .7, ease: 'power3.out' }, '-=.45');
+
+    gsap.to('.hero-video-wrap', {
+      yPercent: 12,
+      ease: 'none',
+      scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
+    });
+
+    gsap.to('.hero-content', {
+      opacity: 0, y: -40,
+      scrollTrigger: { trigger: '#hero', start: '30% top', end: 'bottom top', scrub: true }
+    });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      gsap.fromTo(el, { opacity: 0, y: 32 }, {
+        opacity: 1, y: 0, duration: .8, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' }
+      });
+    });
+  </script>
+</body>
+</html>
