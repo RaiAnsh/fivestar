@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/detailing", "destination": "/services#detailing", "permanent": true },
+    { "source": "/vehicleservices", "destination": "/services#vehicle-services", "permanent": true }
+  ]
 }
