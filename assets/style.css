@@ -103,7 +103,7 @@
     }
 
     .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo img { height: 58px; width: auto; }
+    .nav-logo img { height: 87px; width: auto; }
 
     .nav-links {
       display: flex;
