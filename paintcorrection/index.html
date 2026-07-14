@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paint Correction & Ceramic Coating | Five Star Mobile Detailing</title>
+  <meta name="description" content="Our paint correction and ceramic coating services are the perfect combination to give your vehicle the ultimate protection and shine. Contact us today to schedule an appointment and give your vehicle the care it deserves." />
+  <link rel="canonical" href="https://www.fivestarmobiledetailing.ca/paintcorrection" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Paint Correction & Ceramic Coating | Five Star Mobile Detailing" />
+  <meta property="og:description" content="Certified paint correction &amp; ceramic coating installations across the GTA — restore your paint's shine and protect it for years to come." />
+  <meta property="og:url" content="https://www.fivestarmobiledetailing.ca/paintcorrection" />
+  <meta property="og:image" content="https://www.fivestarmobiledetailing.ca/gallary/bmw-m3-paint-correction-detail.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Five Star Mobile Detailing",
+    "image": "https://www.fivestarmobiledetailing.ca/logo.png",
+    "url": "https://www.fivestarmobiledetailing.ca/",
+    "telephone": "+14373450034",
+    "email": "Ryan@FiveStarMobileDetailing.ca",
+    "priceRange": "$$",
+    "areaServed": ["Mississauga", "Brampton", "Oakville", "Greater Toronto Area"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "sameAs": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "57"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+  <!-- ─── MOBILE MENU ────────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&#x2715;</button>
+    <a href="/about" onclick="closeMobileMenu()">About</a>
+    <a href="/services" onclick="closeMobileMenu()">Services</a>
+    <a href="/services#pricing" onclick="closeMobileMenu()">Ceramic Coating</a>
+    <a href="/gallary" onclick="closeMobileMenu()">Gallery</a>
+    <a href="/#reviews" onclick="closeMobileMenu()">Reviews</a>
+    <a href="/book-now" onclick="closeMobileMenu()">Contact</a>
+    <a href="/book-now" onclick="closeMobileMenu()" class="btn-primary" style="margin-top:10px;">Get a Free Quote</a>
+  </div>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Five Star Mobile Detailing Home">
+        <img src="/logo.png" alt="Five Star Mobile Detailing logo" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/services#pricing">Ceramic Coating</a></li>
+        <li><a href="/gallary">Gallery</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/book-now">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="tel:+14373450034" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          437-345-0034
+        </a>
+        <a href="/book-now" class="btn-nav-quote">Get a Free Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── PAGE HEADER ────────────────────────────────── -->
+  <section class="page-header" aria-label="Paint Correction &amp; Ceramic Coating">
+    <div class="container" data-reveal>
+      <div class="breadcrumbs"><a href="/">Home</a> / Paint Correction &amp; Ceramic Coating</div>
+      <span class="eyebrow">Paint Correction &amp; Ceramic Coating</span>
+      <h1 class="section-title">Paint Correction &amp; Ceramic Coating</h1>
+      <p>Our paint correction and ceramic coating services are the perfect combination to give your vehicle the ultimate protection and shine.</p>
+    </div>
+  </section>
+
+  <!-- ─── INTRO ──────────────────────────────────────── -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-copy" data-reveal>
+        <p>Paint correction removes imperfections from the paint surface — swirls, light scratches &amp; oxidation — restoring a deep, reflective finish. Ceramic coating then creates a durable protective layer that repels dirt, grime &amp; UV rays, keeping that finish locked in for years.</p>
+        <p>This combination ensures your vehicle stays looking like new for years to come. Contact us today to schedule an appointment and give your vehicle the care it deserves.</p>
+        <h3>Certified Installations</h3>
+        <p>We use certified Nano-Brite &amp; System X ceramic coatings, backed by a multi-stage machine polish process tailored to your paint's condition — from a single-stage enhancement to a full multi-stage correction before coating.</p>
+      </div>
+      <div class="about-media" data-reveal>
+        <img src="/gallary/bmw-m3-paint-correction-detail.webp" alt="Paint correction and ceramic coating on a BMW M3" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRICING ────────────────────────────────────── -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Pricing &amp; Packages</span>
+        <h2 class="section-title">Transparent Pricing, Starting Estimates</h2>
+        <p class="section-sub">All prices are starting estimates — final quote depends on vehicle size &amp; paint condition.</p>
+      </div>
+
+      <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;margin-bottom:24px;">Paint Correction</h3>
+      <div class="pricing-panel active" style="margin-bottom:56px;">
+        <div class="price-card">
+          <h3>One Stage</h3>
+          <div class="price">$400<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Removes light imperfections</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Enhances overall paint appearance</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sleek, glossy finish</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Two Stage</h3>
+          <div class="price">Get Quote</div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Initial correction pass + finishing polish</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Deep, reflective showroom shine</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ideal before ceramic coating</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Three Stage</h3>
+          <div class="price">Get Quote</div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Decontamination, compounding &amp; polishing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Corrects deep swirls &amp; scratches</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Maximum correction &amp; protection</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;margin-bottom:24px;">Ceramic Coating</h3>
+      <div class="pricing-panel active">
+        <div class="price-card">
+          <h3>1 Year Coating</h3>
+          <div class="price">$299<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 layer Nano-Brite "Rejuvenate" coating</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Applied to exterior, plastics, wheels &amp; trim</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>3 Year Coating</h3>
+          <div class="price">$599<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>2 layers Nano-Brite "Ultra" + 1 layer top coat</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Applied to exterior, plastics, wheels &amp; trim</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>5 Year Coating</h3>
+          <div class="price">$999<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>3 layers Nano-Brite "Platinum" + top coat</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nano-Brite "Vision" coating on all glass</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <p class="price-note">Also available: Fabric Guard, Leather Guard &amp; Vision Window Coating — <a href="/book-now" style="color:var(--gold);font-weight:700;">ask for a custom quote</a>.</p>
+    </div>
+  </section>
+
+  <!-- ─── CLOSING CTA ────────────────────────────────── -->
+  <section class="closing-cta">
+    <div class="container" data-reveal>
+      <h2 class="section-title">Give Your Vehicle The Protection It Deserves</h2>
+      <p>Contact us today to schedule an appointment for paint correction &amp; ceramic coating.</p>
+      <div class="closing-cta-buttons">
+        <a href="/book-now" class="btn-primary">Get a Free Quote</a>
+        <a href="/services" class="btn-secondary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="/logo.png" alt="Five Star Mobile Detailing" /></div>
+          <p class="footer-about">GTA's mobile detailing concierge. Premium car detailing, paint correction &amp; ceramic coating that comes to you — Mississauga, Brampton, Oakville &amp; beyond.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/services#pricing">Ceramic Coating</a></li>
+            <li><a href="/gallary">Gallery</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><span>Interior &amp; Exterior Detailing</span></li>
+            <li><a href="/paintcorrection">Paint Correction</a></li>
+            <li><span>Fleet &amp; Semi Truck Detailing</span></li>
+            <li><span>Boat, Marine &amp; RV Detailing</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="tel:+14373450034">437-345-0034</a></li>
+            <li><a href="mailto:Ryan@FiveStarMobileDetailing.ca">Ryan@FiveStarMobileDetailing.ca</a></li>
+            <li><span>Serving Mississauga, Brampton, Oakville &amp; the GTA</span></li>
+            <li><a href="/book-now" class="btn-nav-quote" style="display:inline-block;margin-top:6px;">Get a Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Five Star Mobile Detailing. All rights reserved.</span>
+        <span>Est. 2021 &bull; Serving the Greater Toronto Area</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── MOBILE STICKY CTA ──────────────────────────── -->
+  <div class="mobile-cta-bar">
+    <a href="tel:+14373450034" class="call">Call Now</a>
+    <a href="/book-now" class="quote">Get a Free Quote</a>
+  </div>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

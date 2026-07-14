@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Five Star Mobile Detailing</title>
+  <meta name="description" content="Five Star Mobile Detailing is your go-to destination for top-notch car detailing services across Mississauga, Brampton, Oakville &amp; the GTA. Our experienced team uses only the best products &amp; equipment to give your vehicle the ultimate care." />
+  <link rel="canonical" href="https://www.fivestarmobiledetailing.ca/about" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About | Five Star Mobile Detailing" />
+  <meta property="og:description" content="GTA's mobile detailing concierge — trusted by 2,000+ drivers since 2021. Meet the team bringing premium car care directly to your driveway." />
+  <meta property="og:url" content="https://www.fivestarmobiledetailing.ca/about" />
+  <meta property="og:image" content="https://www.fivestarmobiledetailing.ca/gallary/corvette-mobile-detailing-mississauga.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Five Star Mobile Detailing",
+    "image": "https://www.fivestarmobiledetailing.ca/logo.png",
+    "url": "https://www.fivestarmobiledetailing.ca/",
+    "telephone": "+14373450034",
+    "email": "Ryan@FiveStarMobileDetailing.ca",
+    "priceRange": "$$",
+    "areaServed": ["Mississauga", "Brampton", "Oakville", "Greater Toronto Area"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "sameAs": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "57"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+  <!-- ─── MOBILE MENU ────────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&#x2715;</button>
+    <a href="/about" onclick="closeMobileMenu()">About</a>
+    <a href="/services" onclick="closeMobileMenu()">Services</a>
+    <a href="/services#pricing" onclick="closeMobileMenu()">Ceramic Coating</a>
+    <a href="/gallary" onclick="closeMobileMenu()">Gallery</a>
+    <a href="/#reviews" onclick="closeMobileMenu()">Reviews</a>
+    <a href="/book-now" onclick="closeMobileMenu()">Contact</a>
+    <a href="/book-now" onclick="closeMobileMenu()" class="btn-primary" style="margin-top:10px;">Get a Free Quote</a>
+  </div>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Five Star Mobile Detailing Home">
+        <img src="/logo.png" alt="Five Star Mobile Detailing logo" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/services#pricing">Ceramic Coating</a></li>
+        <li><a href="/gallary">Gallery</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/book-now">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="tel:+14373450034" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          437-345-0034
+        </a>
+        <a href="/book-now" class="btn-nav-quote">Get a Free Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── PAGE HEADER ────────────────────────────────── -->
+  <section class="page-header" aria-label="About Five Star Mobile Detailing">
+    <div class="container" data-reveal>
+      <div class="breadcrumbs"><a href="/">Home</a> / About</div>
+      <span class="eyebrow">About Five Star</span>
+      <h1 class="section-title">About Five Star Mobile Detailing</h1>
+      <p>Five Star Mobile Detailing is your go-to destination for top-notch car detailing services across Mississauga, Brampton, Oakville &amp; the Greater Toronto Area. Our team of experienced professionals is dedicated to providing you with the ultimate car care experience — using only the best products and equipment so your vehicle looks and feels as good as new.</p>
+    </div>
+  </section>
+  <!-- ─── ABOUT ──────────────────────────────────────── -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-copy" data-reveal>
+        <span class="eyebrow">About Five Star</span>
+        <h2 class="section-title">GTA's Mobile Detailing Concierge</h2>
+        <p>At <strong>Five Star Mobile Detailing</strong>, we bring premium car detailing services directly to your door — whether you're in Mississauga, Brampton, Oakville, or anywhere across the Greater Toronto Area. We arrive fully equipped with our own water and power, so you never need to visit a shop.</p>
+        <p>Since 2021 we've built our reputation one vehicle at a time on meticulous attention to detail, honest communication, and results that speak for themselves — from daily drivers to collector cars, corporate fleets to ceramic coating clients.</p>
+        <h3>Concierge Convenience</h3>
+        <p>Book online, tell us about your vehicle, and we'll come to you — at home, at the office, or wherever's easiest. No shop visit, no waiting room, no wasted time.</p>
+        <h3>Our Story</h3>
+        <p>Since opening in 2021, we've detailed over 2,000 vehicles for GTA drivers, dealerships, corporate fleets &amp; ceramic coating clients — building our reputation one vehicle at a time on meticulous attention to detail, honest communication, and results that speak for themselves.</p>
+      </div>
+      <div class="about-media" data-reveal>
+        <img src="/gallary/corvette-mobile-detailing-mississauga.webp" alt="Close-up of a Corvette hood after mobile detailing by Five Star Mobile Detailing" loading="lazy" class="zoom-hood" />
+        <div class="about-badge">
+          <span class="num">2,000+</span>
+          <span class="lbl">Vehicles detailed for GTA drivers since 2021</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRUST STATS BAR ────────────────────────────── -->
+  <section id="trust-bar">
+    <div class="container trust-bar-inner">
+      <span class="eyebrow">Trusted By GTA Drivers</span>
+      <h2 class="trust-bar-title">Not Your Typical Car Wash</h2>
+      <div class="trust-stats">
+        <div class="trust-stat"><span class="n">2,000+</span><span class="l">Vehicles Detailed</span></div>
+        <div class="trust-stat"><span class="n">5.0★</span><span class="l">Average Rating</span></div>
+        <div class="trust-stat"><span class="n">100%</span><span class="l">Mobile Service</span></div>
+        <div class="trust-stat"><span class="n">Est.</span><span class="l">2021 &bull; Certified Installers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRUSTED BY ─────────────────────────────────── -->
+  <section id="trusted-by">
+    <div class="container" data-reveal>
+      <p class="trusted-by-label">Trusted By</p>
+      <div class="brand-logos">
+        <div class="brand-logo"><img src="/brands/peel-regional-paramedic-services-logo.avif" alt="Peel Regional Paramedic Services" loading="lazy" /></div>
+        <div class="brand-logo"><img src="/brands/peel-region-logo.avif" alt="Peel Region" loading="lazy" /></div>
+        <div class="brand-logo"><img src="/brands/air-canada-logo.avif" alt="Air Canada" loading="lazy" /></div>
+        <div class="brand-logo"><img src="/brands/miller-waste-systems-logo.avif" alt="Miller Waste Systems" loading="lazy" /></div>
+        <div class="brand-logo"><img src="/brands/proax-technologies-logo.avif" alt="ProAx Technologies" loading="lazy" /></div>
+        <div class="brand-logo"><img src="/brands/krown-rust-control-logo.avif" alt="Krown Rust Control" loading="lazy" /></div>
+        <div class="brand-logo"><img src="/brands/tire-wholesale-inc-logo.avif" alt="Tire Wholesale Inc." loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── CLOSING CTA ────────────────────────────────── -->
+  <section class="closing-cta">
+    <div class="container" data-reveal>
+      <h2 class="section-title">Ready To Experience Five Star?</h2>
+      <p>Book your mobile detail today and see why 2,000+ GTA drivers trust Five Star Mobile Detailing.</p>
+      <div class="closing-cta-buttons">
+        <a href="/book-now" class="btn-primary">Reserve Your Detail</a>
+        <a href="/services" class="btn-secondary">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="/logo.png" alt="Five Star Mobile Detailing" /></div>
+          <p class="footer-about">GTA's mobile detailing concierge. Premium car detailing, paint correction &amp; ceramic coating that comes to you — Mississauga, Brampton, Oakville &amp; beyond.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/services#pricing">Ceramic Coating</a></li>
+            <li><a href="/gallary">Gallery</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><span>Interior &amp; Exterior Detailing</span></li>
+            <li><a href="/paintcorrection">Paint Correction</a></li>
+            <li><span>Fleet &amp; Semi Truck Detailing</span></li>
+            <li><span>Boat, Marine &amp; RV Detailing</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="tel:+14373450034">437-345-0034</a></li>
+            <li><a href="mailto:Ryan@FiveStarMobileDetailing.ca">Ryan@FiveStarMobileDetailing.ca</a></li>
+            <li><span>Serving Mississauga, Brampton, Oakville &amp; the GTA</span></li>
+            <li><a href="/book-now" class="btn-nav-quote" style="display:inline-block;margin-top:6px;">Get a Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Five Star Mobile Detailing. All rights reserved.</span>
+        <span>Est. 2021 &bull; Serving the Greater Toronto Area</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── MOBILE STICKY CTA ──────────────────────────── -->
+  <div class="mobile-cta-bar">
+    <a href="tel:+14373450034" class="call">Call Now</a>
+    <a href="/book-now" class="quote">Get a Free Quote</a>
+  </div>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

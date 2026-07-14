@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Five Star Mobile Detailing</title>
+  <meta name="description" content="View all the services we offer at Five Star Mobile Detailing — Mobile Detailing, Paint Correction &amp; Ceramic Coating, Vehicle Service &amp; Customization, Fleet Detailing &amp; much more!" />
+  <link rel="canonical" href="https://www.fivestarmobiledetailing.ca/services" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Services | Five Star Mobile Detailing" />
+  <meta property="og:description" content="Mobile detailing, paint correction, ceramic coating, fleet &amp; semi truck detailing, marine detailing &amp; more — transparent pricing for every vehicle." />
+  <meta property="og:url" content="https://www.fivestarmobiledetailing.ca/services" />
+  <meta property="og:image" content="https://www.fivestarmobiledetailing.ca/gallary/bmw-m3-paint-correction-detail.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Five Star Mobile Detailing",
+    "image": "https://www.fivestarmobiledetailing.ca/logo.png",
+    "url": "https://www.fivestarmobiledetailing.ca/",
+    "telephone": "+14373450034",
+    "email": "Ryan@FiveStarMobileDetailing.ca",
+    "priceRange": "$$",
+    "areaServed": ["Mississauga", "Brampton", "Oakville", "Greater Toronto Area"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "sameAs": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "57"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+  <!-- ─── MOBILE MENU ────────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&#x2715;</button>
+    <a href="/about" onclick="closeMobileMenu()">About</a>
+    <a href="/services" onclick="closeMobileMenu()">Services</a>
+    <a href="/services#pricing" onclick="closeMobileMenu()">Ceramic Coating</a>
+    <a href="/gallary" onclick="closeMobileMenu()">Gallery</a>
+    <a href="/#reviews" onclick="closeMobileMenu()">Reviews</a>
+    <a href="/book-now" onclick="closeMobileMenu()">Contact</a>
+    <a href="/book-now" onclick="closeMobileMenu()" class="btn-primary" style="margin-top:10px;">Get a Free Quote</a>
+  </div>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Five Star Mobile Detailing Home">
+        <img src="/logo.png" alt="Five Star Mobile Detailing logo" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/services#pricing">Ceramic Coating</a></li>
+        <li><a href="/gallary">Gallery</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/book-now">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="tel:+14373450034" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          437-345-0034
+        </a>
+        <a href="/book-now" class="btn-nav-quote">Get a Free Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── PAGE HEADER ────────────────────────────────── -->
+  <section class="page-header" aria-label="Our Services">
+    <div class="container" data-reveal>
+      <div class="breadcrumbs"><a href="/">Home</a> / Services</div>
+      <span class="eyebrow">Services We Offer</span>
+      <h1 class="section-title">Our Services</h1>
+      <p>View all the services we offer at Five Star Mobile Detailing — Mobile Detailing, Paint Correction &amp; Ceramic Coating, Vehicle Service &amp; Customization, Fleet Detailing &amp; much more, across the Greater Toronto Area.</p>
+    </div>
+  </section>
+  <!-- ─── SERVICES ───────────────────────────────────── -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Services We Offer</span>
+        <h2 class="section-title">Built For Owners Who Value Their Vehicles</h2>
+        <p class="section-sub">From daily drivers to fleets, luxury vehicles to marine — mobile detailing designed around your schedule, not ours.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/mercedes-interior-detailing-brampton.webp" alt="Mercedes interior detailing in Brampton" loading="lazy" /></div>
+          <div class="body">
+            <h3>Interior / Exterior Detailing</h3>
+            <p>Every inch cleaned, conditioned &amp; polished — from the dashboard to the wheels — using premium products and equipment.</p>
+            <a href="/book-now" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/bmw-m3-paint-correction-detail.webp" alt="Paint correction and ceramic coating on a BMW M3" loading="lazy" /></div>
+          <div class="body">
+            <h3>Paint Correction &amp; Ceramic Coating</h3>
+            <p>Remove imperfections and lock in a showroom-deep shine with our certified Nano-Brite &amp; System X ceramic installations.</p>
+            <a href="/paintcorrection" class="learn">View Packages &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/fleet-detailing-peel-paramedics.webp" alt="Fleet detailing for a Peel Region Paramedic Services vehicle" loading="lazy" /></div>
+          <div class="body">
+            <h3>Company Fleet Detailing</h3>
+            <p>We come to your lot and detail your fleet on-site — keeping your vehicles presentable without disrupting operations.</p>
+            <a href="/book-now" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/wheel-detail-red-brake-caliper.webp" alt="Detailing add-on service, wheel and brake caliper detail" loading="lazy" /></div>
+          <div class="body">
+            <h3>Detailing Add-Ons</h3>
+            <p>Headlight restoration, engine bay detailing, odor removal, pet hair removal &amp; more — customize your package.</p>
+            <a href="/book-now" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/volvo-semi-truck-detailing-gta.webp" alt="Semi truck detailing, day cab and sleeper, GTA" loading="lazy" /></div>
+          <div class="body">
+            <h3>Semi Truck Detailing</h3>
+            <p>Day cab, sleeper cab &amp; full rig detailing that leaves your truck looking brand new — on-site, on your schedule.</p>
+            <a href="/book-now" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/seadoo-jetski-marine-detailing.webp" alt="Sea-Doo jet ski marine detailing" loading="lazy" /></div>
+          <div class="body">
+            <h3>Boat, Marine &amp; RV Detailing</h3>
+            <p>Exterior washing and interior detailing for boats, jet skis &amp; RVs — keeping your watercraft in top condition.</p>
+            <a href="/book-now" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/corvette-mobile-detailing-mississauga.webp" alt="Corvette detailing and customization in Mississauga" loading="lazy" /></div>
+          <div class="body">
+            <h3>Vehicle Service &amp; Customization</h3>
+            <p>From basic maintenance to full detailing overhauls — we help keep your vehicle looking and running like new.</p>
+            <a href="/book-now" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="img-wrap"><img src="/gallary/bmw-m2-ceramic-coating-gta.webp" alt="Dealership-ready mobile detailing on a BMW M2" loading="lazy" /></div>
+          <div class="body">
+            <h3>Dealership Detailing</h3>
+            <p>On-site detailing for used &amp; new car dealerships — impress your customers with showroom-ready inventory.</p>
+            <a href="/book-now" class="learn">Get a Quote &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRICING / CERAMIC COATING ──────────────────── -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Pricing &amp; Packages</span>
+        <h2 class="section-title">Transparent Pricing For Every Vehicle</h2>
+        <p class="section-sub">From express hand washes to full ceramic coating protection — all prices are starting estimates, final quote depends on vehicle size &amp; condition.</p>
+      </div>
+
+      <div class="pricing-tabs">
+        <button class="pricing-tab-btn active" data-tab="packages">Detailing Packages</button>
+        <button class="pricing-tab-btn" data-tab="interior-exterior">Interior / Exterior Only</button>
+        <button class="pricing-tab-btn" data-tab="coating">Ceramic Coating</button>
+        <button class="pricing-tab-btn" data-tab="correction">Paint Correction</button>
+        <button class="pricing-tab-btn" data-tab="addons">Add-Ons</button>
+        <button class="pricing-tab-btn" data-tab="vehicle">Vehicle Services</button>
+      </div>
+
+      <div class="pricing-panel active" id="panel-packages">
+        <div class="price-card">
+          <h3>Standard In &amp; Out Detail</h3>
+          <div class="price">$100<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Foam bath &amp; hand wash exterior</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Wheel, tire &amp; door jamb cleaning</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Window cleaning inside &amp; out</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full interior vacuum &amp; wipe down</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Complete In &amp; Out Detail</h3>
+          <div class="price">$199<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Exterior foam bath, hand wash &amp; wheel detail</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Protective wax + tire shine, hand dried</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full interior steam clean, shampoo &amp; heated extraction</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Complete Plus</h3>
+          <div class="price">$349<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Everything in Complete, plus 3-stage machine polish</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Engine bay wash, clay bar treatment &amp; sealant</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>De-odorizing process for a showroom finish</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-interior-exterior">
+        <div class="price-card">
+          <h3>Premium Hand Wash, Wax &amp; Dry</h3>
+          <div class="price">$60<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Two-bucket hand wash method</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Deep clean of tires, rims &amp; wheel wells</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hand dried with drying aid/sealant for shine</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Clay &amp; Seal</h3>
+          <div class="price">$200<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Complete iron decontamination wash</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Advanced clay bar treatment</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ceramic Shield spray coat (6–12 mo) + engine bay detail</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Complete Interior Detail</h3>
+          <div class="price">$100<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Complete vacuum incl. trunk &amp; brush/wipe down</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Floor, carpet &amp; seat steam, shampoo &amp; extraction</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Leather conditioning &amp; air vents cleaned</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-coating">
+        <div class="price-card">
+          <h3>1 Year Coating</h3>
+          <div class="price">$299<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 layer Nano-Brite "Rejuvenate" coating</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Applied to exterior, plastics, wheels &amp; trim</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>3 Year Coating</h3>
+          <div class="price">$599<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>2 layers Nano-Brite "Ultra" + 1 layer top coat</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Applied to exterior, plastics, wheels &amp; trim</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>5 Year Coating</h3>
+          <div class="price">$999<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Full paint correction, decontamination &amp; prep work</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>3 layers Nano-Brite "Platinum" + top coat</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nano-Brite "Vision" coating on all glass</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-correction">
+        <div class="price-card">
+          <h3>One Stage</h3>
+          <div class="price">$400<small>+</small></div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Removes light imperfections</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Enhances overall paint appearance</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sleek, glossy finish</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Two Stage</h3>
+          <div class="price">Get Quote</div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Initial correction pass + finishing polish</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Deep, reflective showroom shine</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ideal before ceramic coating</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Three Stage</h3>
+          <div class="price">Get Quote</div>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Decontamination, compounding &amp; polishing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Corrects deep swirls &amp; scratches</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Maximum correction &amp; protection</li>
+          </ul>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-addons">
+        <div class="price-card">
+          <h3>Headlight Restoration</h3>
+          <div class="price">$50</div>
+          <p class="addon-desc">Wet sanding, 3-stage machine polish &amp; 2 coats of ceramic coating for a 1-year warranty. Per pair.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Pet Hair Removal</h3>
+          <div class="price">$40</div>
+          <p class="addon-desc">Complete removal of pet hair from seats, carpets &amp; trunk, leaving your vehicle fresh and clean.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Engine Bay Detail</h3>
+          <div class="price">$50</div>
+          <p class="addon-desc">Complete degrease &amp; brush down, rinse &amp; air dry, finished with dressing on all plastics.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Fall Out Removal &amp; Clay Bar</h3>
+          <div class="price">$199</div>
+          <p class="addon-desc">Complete exterior fallout removal, full hand wash &amp; dry, plus an advanced clay bar treatment.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Tree Sap &amp; Bug Removal</h3>
+          <div class="price">$40</div>
+          <p class="addon-desc">Safe, thorough removal of stubborn bugs &amp; tree sap without damaging your paint.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <div class="pricing-panel" id="panel-vehicle">
+        <div class="price-card">
+          <h3>Seasonal Tire Swap</h3>
+          <div class="price">$50<small>+</small></div>
+          <p class="addon-desc">$50 car/sedan/coupe &middot; $60 truck/SUV/minivan &middot; $70 all Tesla models. Torqued &amp; filled to spec, tires must be mounted on rims.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Caliper Paint</h3>
+          <div class="price">$199</div>
+          <p class="addon-desc">All 4 calipers sanded, primed with 3 coats of high-heat primer, paint &amp; clear coat. Custom decals available.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Oil Change</h3>
+          <div class="price">$50</div>
+          <p class="addon-desc">Old oil &amp; filter drained and disposed of, replaced &amp; filled to manufacturer spec. Customer supplies oil &amp; filter.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Chrome Delete</h3>
+          <div class="price">Contact</div>
+          <p class="addon-desc">Custom quote based on your vehicle's year, make &amp; model — call or text <a href="tel:+14373450034" style="color:var(--gold);font-weight:700;">437-345-0034</a>.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+        <div class="price-card">
+          <h3>Headlight / Taillight Tint</h3>
+          <div class="price">$80</div>
+          <p class="addon-desc">Light or dark smoke film for headlights, taillights or fog lights — durable &amp; easy to remove.</p>
+          <a href="/book-now" class="btn-primary">Book This Package</a>
+        </div>
+      </div>
+
+      <p class="price-note">Also available: Fabric Guard, Leather Guard &amp; Vision Window Coating — <a href="/book-now" style="color:var(--gold);font-weight:700;">ask for a custom quote</a>.</p>
+    </div>
+  </section>
+
+
+  <!-- ─── CLOSING CTA ────────────────────────────────── -->
+  <section class="closing-cta">
+    <div class="container" data-reveal>
+      <h2 class="section-title">Not Sure Which Package Is Right For You?</h2>
+      <p>Tell us about your vehicle and we'll recommend the perfect package — no pressure, just honest advice.</p>
+      <div class="closing-cta-buttons">
+        <a href="/book-now" class="btn-primary">Get a Free Quote</a>
+        <a href="/gallary" class="btn-secondary">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="/logo.png" alt="Five Star Mobile Detailing" /></div>
+          <p class="footer-about">GTA's mobile detailing concierge. Premium car detailing, paint correction &amp; ceramic coating that comes to you — Mississauga, Brampton, Oakville &amp; beyond.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/services#pricing">Ceramic Coating</a></li>
+            <li><a href="/gallary">Gallery</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><span>Interior &amp; Exterior Detailing</span></li>
+            <li><a href="/paintcorrection">Paint Correction</a></li>
+            <li><span>Fleet &amp; Semi Truck Detailing</span></li>
+            <li><span>Boat, Marine &amp; RV Detailing</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="tel:+14373450034">437-345-0034</a></li>
+            <li><a href="mailto:Ryan@FiveStarMobileDetailing.ca">Ryan@FiveStarMobileDetailing.ca</a></li>
+            <li><span>Serving Mississauga, Brampton, Oakville &amp; the GTA</span></li>
+            <li><a href="/book-now" class="btn-nav-quote" style="display:inline-block;margin-top:6px;">Get a Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Five Star Mobile Detailing. All rights reserved.</span>
+        <span>Est. 2021 &bull; Serving the Greater Toronto Area</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── MOBILE STICKY CTA ──────────────────────────── -->
+  <div class="mobile-cta-bar">
+    <a href="tel:+14373450034" class="call">Call Now</a>
+    <a href="/book-now" class="quote">Get a Free Quote</a>
+  </div>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>
