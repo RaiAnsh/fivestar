@@ -66,3 +66,54 @@
         scrollTrigger: { trigger: el, start: 'top 88%' }
       });
     });
+
+    /* Quote form — AJAX submit to Formspree, inline success/error, no page navigation */
+    document.querySelectorAll('.quote-form').forEach(form => {
+      const box = form.closest('.quote-form-box') || form.parentElement;
+      const successEl = box.querySelector('.quote-form-success');
+      const errorEl = form.querySelector('.form-error-msg');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const submitLabel = submitBtn ? submitBtn.textContent : '';
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (errorEl) errorEl.classList.remove('show');
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            form.hidden = true;
+            if (successEl) successEl.hidden = false;
+          } else {
+            const data = await res.json().catch(() => null);
+            const msg = data && data.errors && data.errors.length
+              ? data.errors.map(err => err.message).join(', ')
+              : 'Something went wrong — please try again or call/text us at 437-345-0034.';
+            if (errorEl) { errorEl.querySelector('span').textContent = msg; errorEl.classList.add('show'); }
+          }
+        } catch (err) {
+          if (errorEl) {
+            errorEl.querySelector('span').textContent = 'Something went wrong — please check your connection and try again, or call/text us at 437-345-0034.';
+            errorEl.classList.add('show');
+          }
+        } finally {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
+        }
+      });
+    });
+
+    document.querySelectorAll('.quote-form-reset').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const successEl = btn.closest('.quote-form-success');
+        const box = successEl.closest('.quote-form-box') || successEl.parentElement;
+        const form = box.querySelector('.quote-form');
+        if (form) { form.reset(); form.hidden = false; }
+        successEl.hidden = true;
+      });
+    });

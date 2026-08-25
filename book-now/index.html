@@ -131,7 +131,11 @@
 
       <form class="quote-form" data-reveal action="https://formspree.io/f/xqpzrqld" method="POST">
         <input type="hidden" name="_subject" value="New Quote Request — Five Star Mobile Detailing" />
-        <input type="hidden" name="_next" value="https://www.fivestarmobiledetailing.ca/book-now" />
+
+        <div class="form-error-msg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Something went wrong — please try again.</span>
+        </div>
 
         <div class="form-row">
           <label for="fullName">Full Name *</label>
@@ -161,6 +165,15 @@
         <button type="submit" class="btn-primary">Get My Quote</button>
         <p class="form-disclaimer">We'll never share your info. Response within 24–48 hours.</p>
       </form>
+
+      <div class="quote-form-success" hidden>
+        <div class="success-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Thank You!</h3>
+        <p>We've received your quote request and will get back to you within 24–48 hours. In a rush? Call or text us at <a href="tel:+14373450034" style="color:var(--gold);font-weight:700;">437-345-0034</a>.</p>
+        <button type="button" class="quote-form-reset">Send Another Request</button>
+      </div>
     </div>
   </section>
 
