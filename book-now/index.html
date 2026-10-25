@@ -114,6 +114,131 @@
       </div>
     </div>
   </section>
+  <!-- ─── BOOKING FLOW ───────────────────────────────── -->
+  <section id="booking">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Request a Booking</span>
+        <h2 class="section-title">Book Your Detail in 5 Quick Steps</h2>
+        <p class="section-sub">Tell us about your vehicle, pick a package and a time that works, and we'll confirm by call or text.</p>
+      </div>
+
+      <div class="bk-box" data-reveal>
+        <form id="bookingForm" action="https://formspree.io/f/xqpzrqld" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New Booking Request — Five Star Mobile Detailing" />
+          <input type="hidden" name="Booking Summary" id="bkSummaryField" />
+          <input type="hidden" name="Add-ons" id="bkAddonsField" />
+          <input type="hidden" name="Estimated Starting Total" id="bkTotalField" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
+
+          <div class="bk-progress" aria-hidden="true">
+            <span class="bk-dot active"></span><span class="bk-dot"></span><span class="bk-dot"></span><span class="bk-dot"></span><span class="bk-dot"></span>
+          </div>
+
+          <div class="form-error-msg" id="bkError">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>Please complete the required fields.</span>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="bk-step" data-step="1">
+            <h3 class="bk-title">Your vehicle</h3>
+            <div class="bk-grid">
+              <div class="form-row"><label for="bkYear">Year *</label>
+                <select id="bkYear" name="Vehicle Year" required><option value="">Select year</option></select></div>
+              <div class="form-row"><label for="bkMake">Make *</label>
+                <input id="bkMake" name="Vehicle Make" list="bkMakes" placeholder="e.g. Honda" required /></div>
+              <div class="form-row"><label for="bkModel">Model *</label>
+                <input id="bkModel" name="Vehicle Model" placeholder="e.g. Civic" required /></div>
+              <div class="form-row"><label for="bkBody">Body style *</label>
+                <select id="bkBody" name="Body Style" required><option value="">Select body style</option><option>Sedan</option><option>Coupe</option><option>Hatchback</option><option>SUV / Crossover</option><option>Pickup Truck</option><option>Van / Minivan</option><option>Other</option></select></div>
+              <div class="form-row"><label for="bkColor">Color</label>
+                <input id="bkColor" name="Vehicle Color" placeholder="e.g. Black" /></div>
+            </div>
+            <datalist id="bkMakes"><option>Acura</option><option>Audi</option><option>BMW</option><option>Buick</option><option>Cadillac</option><option>Chevrolet</option><option>Chrysler</option><option>Dodge</option><option>Ford</option><option>GMC</option><option>Honda</option><option>Hyundai</option><option>Infiniti</option><option>Jaguar</option><option>Jeep</option><option>Kia</option><option>Land Rover</option><option>Lexus</option><option>Lincoln</option><option>Mazda</option><option>Mercedes-Benz</option><option>Mini</option><option>Mitsubishi</option><option>Nissan</option><option>Porsche</option><option>Ram</option><option>Subaru</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option></datalist>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bk-step" data-step="2" hidden>
+            <h3 class="bk-title">Choose your package</h3>
+            <p class="bk-hint">Prices are starting estimates. Final price depends on vehicle size &amp; condition.</p>
+            <div class="bk-cards">
+            <label class="bk-card"><input type="radio" name="Package" value="Standard In &amp; Out Detail" data-price="100" required /><span class="bk-card-body"><span class="bk-card-title">Standard In &amp; Out Detail</span><span class="bk-card-desc">Foam bath &amp; hand wash, wheels, windows, interior vacuum &amp; wipe down</span><span class="bk-card-price">$100+</span></span></label>
+            <label class="bk-card"><input type="radio" name="Package" value="Complete In &amp; Out Detail" data-price="199" required /><span class="bk-card-body"><span class="bk-card-title">Complete In &amp; Out Detail</span><span class="bk-card-desc">Exterior foam bath, wax + tire shine, full interior steam clean &amp; extraction</span><span class="bk-card-price">$199+</span></span></label>
+            <label class="bk-card"><input type="radio" name="Package" value="Complete Plus" data-price="349" required /><span class="bk-card-body"><span class="bk-card-title">Complete Plus</span><span class="bk-card-desc">Complete detail + 3-stage machine polish, engine bay wash, clay bar &amp; sealant</span><span class="bk-card-price">$349+</span></span></label>
+            <label class="bk-card"><input type="radio" name="Package" value="Complete Interior Detail" data-price="100" required /><span class="bk-card-body"><span class="bk-card-title">Complete Interior Detail</span><span class="bk-card-desc">Vacuum, steam, shampoo &amp; extraction, leather conditioning</span><span class="bk-card-price">$100+</span></span></label>
+            <label class="bk-card"><input type="radio" name="Package" value="Premium Hand Wash, Wax &amp; Dry" data-price="60" required /><span class="bk-card-body"><span class="bk-card-title">Premium Hand Wash, Wax &amp; Dry</span><span class="bk-card-desc">Two-bucket hand wash, wheels &amp; wheel wells, hand dried with sealant</span><span class="bk-card-price">$60+</span></span></label>
+            <label class="bk-card"><input type="radio" name="Package" value="Clay &amp; Seal" data-price="200" required /><span class="bk-card-body"><span class="bk-card-title">Clay &amp; Seal</span><span class="bk-card-desc">Iron decontamination, clay bar, ceramic shield spray coat + engine bay detail</span><span class="bk-card-price">$200+</span></span></label>
+            <label class="bk-card"><input type="radio" name="Package" value="Ceramic Coating or Paint Correction" data-price="0" required /><span class="bk-card-body"><span class="bk-card-title">Ceramic Coating or Paint Correction</span><span class="bk-card-desc">We'll quote this one after we see your vehicle</span><span class="bk-card-price">Custom quote</span></span></label>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bk-step" data-step="3" hidden>
+            <h3 class="bk-title">Enhance your service</h3>
+            <p class="bk-hint">Optional add-ons. Skip if you're all set.</p>
+            <div class="bk-cards">
+            <label class="bk-card"><input type="checkbox" class="bk-addon" value="Headlight Restoration" data-price="50" /><span class="bk-card-body"><span class="bk-card-title">Headlight Restoration</span><span class="bk-card-desc">Wet sanding, polish &amp; ceramic coat (per pair)</span><span class="bk-card-price">+$50</span></span></label>
+            <label class="bk-card"><input type="checkbox" class="bk-addon" value="Pet Hair Removal" data-price="40" /><span class="bk-card-body"><span class="bk-card-title">Pet Hair Removal</span><span class="bk-card-desc">Seats, carpets &amp; trunk</span><span class="bk-card-price">+$40</span></span></label>
+            <label class="bk-card"><input type="checkbox" class="bk-addon" value="Engine Bay Detail" data-price="50" /><span class="bk-card-body"><span class="bk-card-title">Engine Bay Detail</span><span class="bk-card-desc">Degrease, brush down &amp; dressing</span><span class="bk-card-price">+$50</span></span></label>
+            <label class="bk-card"><input type="checkbox" class="bk-addon" value="Fall Out Removal &amp; Clay Bar" data-price="199" /><span class="bk-card-body"><span class="bk-card-title">Fall Out Removal &amp; Clay Bar</span><span class="bk-card-desc">Exterior fallout removal + clay bar treatment</span><span class="bk-card-price">+$199</span></span></label>
+            <label class="bk-card"><input type="checkbox" class="bk-addon" value="Tree Sap &amp; Bug Removal" data-price="40" /><span class="bk-card-body"><span class="bk-card-title">Tree Sap &amp; Bug Removal</span><span class="bk-card-desc">Safe removal without damaging paint</span><span class="bk-card-price">+$40</span></span></label>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bk-step" data-step="4" hidden>
+            <h3 class="bk-title">Schedule &amp; location</h3>
+            <div class="bk-grid">
+              <div class="form-row"><label for="bkDate">Preferred date *</label>
+                <input id="bkDate" name="Preferred Date" type="date" required /></div>
+              <div class="form-row"><label for="bkTime">Preferred time *</label>
+                <select id="bkTime" name="Preferred Time" required><option value="">Select time</option><option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option></select></div>
+            </div>
+            <div class="form-row bk-addr"><label for="bkAddress">Service address *</label>
+              <input id="bkAddress" name="Service Address" placeholder="Start typing your address..." autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="bkAddrList" required />
+              <ul class="bk-addr-list" id="bkAddrList" role="listbox" hidden></ul></div>
+            <div class="form-row"><label for="bkUnit">Unit / apt / buzzer (optional)</label>
+              <input id="bkUnit" name="Unit / Buzzer" placeholder="e.g. Unit 1204, buzz 33" autocomplete="address-line2" /></div>
+            <p class="bk-hint">We'll confirm your exact time by call or text. Parking garage or apartment? Mention it in the notes on the next step.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="bk-step" data-step="5" hidden>
+            <h3 class="bk-title">Your info</h3>
+            <div class="bk-grid">
+              <div class="form-row"><label for="bkName">Full name *</label>
+                <input id="bkName" name="Full Name" autocomplete="name" required /></div>
+              <div class="form-row"><label for="bkPhone">Phone *</label>
+                <input id="bkPhone" name="Phone Number" type="tel" autocomplete="tel" required /></div>
+            </div>
+            <div class="form-row"><label for="bkEmail">Email *</label>
+              <input id="bkEmail" name="email" type="email" autocomplete="email" required /></div>
+            <div class="form-row"><label for="bkNotes">Notes (optional)</label>
+              <textarea id="bkNotes" name="Notes" placeholder="Anything we should know? Pet hair, stains, parking details..."></textarea></div>
+            <div class="bk-summary" id="bkSummary" aria-live="polite"></div>
+          </div>
+
+          <div class="bk-nav">
+            <button type="button" class="bk-back" id="bkBack" hidden>Back</button>
+            <button type="button" class="btn-primary" id="bkNext">Continue</button>
+            <button type="submit" class="btn-primary" id="bkSubmit" hidden>Request Booking</button>
+          </div>
+          <p class="form-disclaimer">This is a booking request, not a confirmed appointment. We'll confirm by call or text.</p>
+        </form>
+
+        <div class="quote-form-success bk-success" id="bkSuccess" hidden>
+          <div class="success-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Booking Request Sent!</h3>
+          <p>Thanks! We've got your request and will confirm your time by call or text soon. Need to talk now? <a href="tel:+14373450034" style="color:var(--gold);font-weight:700;">437-345-0034</a>.</p>
+          <button type="button" class="quote-form-reset" id="bkAgain">Book Another Vehicle</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── QUOTE FORM ─────────────────────────────────── -->
   <section id="quote">
     <div class="container quote-grid">
@@ -229,5 +354,7 @@
   </div>
 
   <script src="/assets/main.js" defer></script>
+  <script src="/assets/booking.js" defer></script>
+  <script src="/assets/chatbot.js" defer></script>
 </body>
 </html>

@@ -619,3 +619,111 @@
       .page-header { padding: 130px 0 48px; }
       .closing-cta { padding: 72px 0; }
     }
+
+    /* ─── CHAT WIDGET ──────────────────────────────────── */
+    .fs-chat { position: fixed; right: 20px; bottom: 20px; z-index: 95; font-family: 'Inter', sans-serif; }
+    .fs-chat-toggle {
+      width: 58px; height: 58px; border-radius: 50%; background: var(--gold); color: var(--black);
+      display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);
+      transition: transform .2s, background .2s;
+    }
+    .fs-chat-toggle:hover { transform: scale(1.06); background: var(--gold-dk); }
+    .fs-chat.open .fs-chat-toggle { display: none; }
+    .fs-chat-panel {
+      width: 350px; max-width: calc(100vw - 32px); height: 480px; max-height: calc(100vh - 110px);
+      background: var(--charcoal); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl); display: flex; flex-direction: column; overflow: hidden;
+    }
+    .fs-chat-panel[hidden] { display: none; }
+    .fs-chat-head {
+      background: var(--black); padding: 14px 16px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .fs-chat-head strong { display: block; color: var(--gold); font-size: 15px; }
+    .fs-chat-head span { display: block; color: rgba(255,255,255,.55); font-size: 12px; margin-top: 2px; }
+    .fs-chat-close { color: #fff; font-size: 18px; padding: 4px 8px; }
+    .fs-chat-body { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+    .fs-msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; }
+    .fs-bot { background: var(--charcoal-2); color: rgba(255,255,255,.9); border-bottom-left-radius: 4px; align-self: flex-start; }
+    .fs-bot a { color: var(--gold); font-weight: 700; text-decoration: underline; }
+    .fs-user { background: var(--gold); color: var(--black); border-bottom-right-radius: 4px; align-self: flex-end; font-weight: 500; }
+    .fs-typing { display: flex; gap: 4px; padding: 14px; }
+    .fs-typing span { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.5); animation: fs-bounce 1s infinite; }
+    .fs-typing span:nth-child(2) { animation-delay: .15s; }
+    .fs-typing span:nth-child(3) { animation-delay: .3s; }
+    @keyframes fs-bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-5px); } }
+    .fs-chat-quick { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 16px 10px; }
+    .fs-chat-quick button {
+      font-size: 12px; font-weight: 600; color: var(--gold); border: 1px solid rgba(250,218,49,.4);
+      padding: 6px 12px; border-radius: 50px; transition: background .2s;
+    }
+    .fs-chat-quick button:hover { background: rgba(250,218,49,.12); }
+    .fs-chat-form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid rgba(255,255,255,.08); background: var(--black); }
+    .fs-chat-form input {
+      flex: 1; background: var(--charcoal-2); border: 1px solid rgba(255,255,255,.12); border-radius: 50px;
+      padding: 10px 16px; color: #fff; font-size: 14px; font-family: inherit;
+    }
+    .fs-chat-form input:focus { outline: none; border-color: var(--gold); }
+    .fs-chat-form button { width: 40px; height: 40px; border-radius: 50%; background: var(--gold); color: var(--black); font-size: 16px; }
+
+    @media (max-width: 680px) {
+      .fs-chat { right: 14px; bottom: 82px; }
+      .fs-chat-panel { height: calc(100vh - 170px); }
+    }
+
+    /* ─── BOOKING FLOW ─────────────────────────────────── */
+    #booking { padding: 100px 0; background: var(--off-white); }
+    .bk-box { max-width: 760px; margin: 0 auto; }
+    #bookingForm { background: var(--black); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-xl); }
+    #bookingForm select {
+      width: 100%; background: var(--charcoal-2); border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-sm); padding: 13px 16px; color: #fff; font-size: 14px; font-family: inherit;
+    }
+    #bookingForm select:focus, #bookingForm input[type="date"]:focus { outline: none; border-color: var(--gold); }
+    #bookingForm input[type="date"] { color-scheme: dark; }
+    .bk-progress { display: flex; gap: 8px; margin-bottom: 28px; }
+    .bk-dot { flex: 1; height: 4px; border-radius: 4px; background: rgba(255,255,255,.12); transition: background .3s; }
+    .bk-dot.active { background: var(--gold); }
+    .bk-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 18px; }
+    .bk-hint { font-size: 13px; color: rgba(255,255,255,.5); margin-bottom: 18px; line-height: 1.5; }
+    .bk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+    .bk-cards { display: flex; flex-direction: column; gap: 12px; }
+    .bk-card { display: block; cursor: pointer; }
+    .bk-card input { position: absolute; opacity: 0; pointer-events: none; }
+    .bk-card-body {
+      display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 16px 18px;
+      background: var(--charcoal-2); border: 1.5px solid rgba(255,255,255,.1); border-radius: var(--radius-md);
+      transition: border-color .2s, background .2s;
+    }
+    .bk-card:hover .bk-card-body { border-color: rgba(250,218,49,.45); }
+    .bk-card input:checked + .bk-card-body { border-color: var(--gold); background: rgba(250,218,49,.08); }
+    .bk-card input:focus-visible + .bk-card-body { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .bk-card-title { font-weight: 700; color: #fff; font-size: 15px; }
+    .bk-card-price { grid-row: 1; grid-column: 2; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--gold); font-size: 16px; white-space: nowrap; }
+    .bk-card-desc { grid-column: 1 / -1; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.5; }
+    .bk-summary { margin-top: 8px; background: var(--charcoal-2); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius-md); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+    .bk-summary div { display: flex; gap: 14px; font-size: 13px; line-height: 1.5; }
+    .bk-summary strong { flex: 0 0 72px; color: var(--gold); }
+    .bk-summary span { color: rgba(255,255,255,.85); word-break: break-word; }
+    .bk-nav { display: flex; gap: 12px; margin-top: 26px; }
+    .bk-nav .btn-primary { flex: 1; justify-content: center; }
+    .bk-nav .bk-back { flex: 0 0 auto; padding: 14px 26px; border: 1.5px solid rgba(255,255,255,.25); border-radius: 50px; color: #fff; font-weight: 600; }
+    .bk-nav [hidden] { display: none; }
+    .bk-box .quote-form-success[hidden] { display: none; }
+
+    @media (max-width: 680px) {
+      #booking { padding: 70px 0; }
+      #bookingForm { padding: 26px 20px; }
+      .bk-grid { grid-template-columns: 1fr; }
+    }
+
+    .bk-addr { position: relative; }
+    .bk-addr-list {
+      position: absolute; left: 0; right: 0; top: 100%; margin-top: 4px; z-index: 20; list-style: none;
+      background: var(--charcoal); border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg); max-height: 260px; overflow-y: auto;
+    }
+    .bk-addr-list[hidden] { display: none; }
+    .bk-addr-list li { padding: 11px 16px; font-size: 14px; color: rgba(255,255,255,.85); cursor: pointer; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .bk-addr-list li:last-child { border-bottom: none; }
+    .bk-addr-list li:hover, .bk-addr-list li.active { background: rgba(250,218,49,.14); color: #fff; }
