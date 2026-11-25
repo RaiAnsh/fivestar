@@ -308,16 +308,6 @@
     }
     .trust-pill .stars { color: var(--gold); letter-spacing: 1px; }
 
-    .scroll-indicator {
-      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
-      z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 8px;
-      opacity: .8;
-    }
-    .scroll-mouse { width: 24px; height: 38px; border: 2px solid rgba(255,255,255,.6); border-radius: 14px; position: relative; }
-    .scroll-wheel { width: 4px; height: 8px; background: var(--gold); border-radius: 2px; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); animation: scrollWheel 1.6s ease-in-out infinite; }
-    @keyframes scrollWheel { 0% { opacity: 1; top: 6px; } 100% { opacity: 0; top: 18px; } }
-    .scroll-label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); }
-
     /* ─── ABOUT ────────────────────────────────────────── */
     #about { padding: 120px 0 100px; background: var(--white); }
     .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
